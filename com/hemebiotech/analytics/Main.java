@@ -9,14 +9,14 @@ import com.hemebiotech.analytics.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.WriteSymptomDataToFile;
 
 
-public class Main { /**
+public class Main { 
 
 public static void main(String[] args) {
     // Instancer objet ISymptomReader
-    ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("symptoms.txt");
+    ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
 
     // Instancer objet ISymptomWriter
-   WriteSymptomDataToFile writer = new WriteSymptomDataToFile("result.out");
+    ISymptomWriter writer = new WriteSymptomDataToFile();
 
 
     // Instancer objet AnalyticsCounter
@@ -32,7 +32,7 @@ public static void main(String[] args) {
     Map<String, Integer> sortedSymptoms = analyticsCounter.sortSymptoms(countedSymptoms);
 
     // Écriture des résultats dans le fichier de sortie
-    analyticsCounter.writeSymptoms(sortedSymptoms); **/
+    analyticsCounter.writeSymptoms(sortedSymptoms); 
 }
 
-
+}
