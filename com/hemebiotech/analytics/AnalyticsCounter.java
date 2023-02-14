@@ -10,7 +10,7 @@ import java.util.TreeMap;
 
 public class AnalyticsCounter {
    
-   private ISymptomReader reader;
+  /** private ISymptomReader reader;
    private ISymptomWriter writer;
    
     public AnalyticsCounter(ISymptomReader reader, ISymptomWriter writer) {
@@ -41,5 +41,5 @@ public class AnalyticsCounter {
 
     public void writeSymptoms(Map<String, Integer> symptoms) {
       writer.writeSymptoms(symptoms);
-   }
+   } **/
 }
