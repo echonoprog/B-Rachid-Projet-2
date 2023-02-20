@@ -1,17 +1,21 @@
 package com.hemebiotech.analytics;
 
-import java.util.List;
-import java.util.Map;
 import com.hemebiotech.analytics.AnalyticsCounter;
 import com.hemebiotech.analytics.ISymptomReader;
 import com.hemebiotech.analytics.ISymptomWriter;
 import com.hemebiotech.analytics.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.WriteSymptomDataToFile;
+import java.util.List;
+import java.util.Map;
 
+public class Main {
 
-public class Main { 
+  /**
+  * Point d'entrée de l'application.
+  * @param args un tableau de chaînes de caractères.
+  */
+  public static void main(String[] args) {
 
-public static void main(String[] args) {
     // Instancer objet ISymptomReader
     ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
 
@@ -33,6 +37,5 @@ public static void main(String[] args) {
 
     // Écriture des résultats dans le fichier de sortie
     analyticsCounter.writeSymptoms(sortedSymptoms); 
-}
-
+  }
 }
